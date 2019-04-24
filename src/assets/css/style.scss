@@ -96,6 +96,47 @@ $topbarsize: 60px;
     }
 }
 
+#products{
+    padding: 100px 0;
+    background: $white;
+
+    .products_title{
+        padding: 0 30px;
+        max-width: 300px;
+
+        font-size: 40px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        line-height: 140%;
+    }
+
+    .products_list{
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        .product_item{
+            position: relative;
+
+            padding: 50px;
+
+            text-align: center;
+
+            a{
+                display: block;
+
+                .product_picture{
+                    display: inline-block;
+
+                    img{
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
 #floating_menu{
     position: fixed;
     top: 0;
