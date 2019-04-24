@@ -43,7 +43,7 @@ function scripts() {
     .pipe(gulp.dest(paths.scripts.dest));
 }
 
-function minifyHTML() {
+function html() {
     return gulp.src(paths.html.src)
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest(paths.html.dest));
@@ -52,9 +52,19 @@ function minifyHTML() {
 function watch() {
     gulp.watch(paths.scripts.src, scripts);
     gulp.watch(paths.styles.src, styles);
-    gulp.watch(paths.html.src, minifyHTML);
+    gulp.watch(paths.html.src, html);
+}
+
+function build() {
+    styles();
+    scripts();
+    html();
 }
 
 exports.styles = styles;
 exports.scripts = scripts;
+exports.html = html;
 exports.watch = watch;
+exports.build = build;
+
+exports.default = build;

@@ -30,7 +30,7 @@ npm install
 Execute o comando abaixo na pasta principal do projeto.
 
 ```bash
-gulp watch
+gulp build
 ```
 
-Então abra o arquivo ```index.html``` em seu navegador.
+Então abra o arquivo ```dist/index.html``` em seu navegador.
