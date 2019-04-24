@@ -4,6 +4,7 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 var cleanCSS = require('gulp-clean-css');
+var htmlmin = require('gulp-htmlmin');
 
 var paths = {
     styles: {
@@ -14,6 +15,11 @@ var paths = {
     scripts: {
         src: 'src/assets/js/**/*.js',
         dest: 'dist/assets/js/'
+    },
+
+    html: {
+        src: 'src/*.html',
+        dest: 'dist/'
     }
 };
 
@@ -37,9 +43,16 @@ function scripts() {
     .pipe(gulp.dest(paths.scripts.dest));
 }
 
+function minifyHTML() {
+    return gulp.src(paths.html.src)
+        .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(gulp.dest(paths.html.dest));
+}
+
 function watch() {
     gulp.watch(paths.scripts.src, scripts);
     gulp.watch(paths.styles.src, styles);
+    gulp.watch(paths.html.src, minifyHTML);
 }
 
 exports.styles = styles;

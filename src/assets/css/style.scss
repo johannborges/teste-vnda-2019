@@ -1,2 +1,104 @@
 @import "shared";
+@import "general";
 
+$topbarsize: 60px;
+#topbar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+
+    background: $white;
+
+    height: $topbarsize;
+    width: 100%;
+
+    .open_menu{
+        display: inline-block;
+        vertical-align: middle;
+
+        height: $topbarsize;
+        width: $topbarsize;
+
+        padding: 0;
+
+        background: transparent;
+        border: 0;
+
+        font-size: 29px;
+        font-family: $icons;
+        color: $darkgrey;
+        text-align: center;
+        line-height: $topbarsize;
+
+        cursor: pointer;
+
+        transition: .3s;
+
+        &:hover{
+            background: $cream;
+            color: $white;
+        }
+    }
+
+    .logo{
+        display: inline-block;
+        vertical-align: middle;
+
+        height: $topbarsize;
+        width: calc(100% - (#{$topbarsize} * 3));
+
+        text-align: center;
+
+        a{
+            display: inline-block;
+
+            padding: 0 15px;
+
+            line-height: $topbarsize;
+            text-align: center;
+            color: $cream;
+            font-weight: 700;
+            font-size: 24px;
+            letter-spacing: 3px;
+
+            transition: .3s;
+
+            &:hover{
+                color: $darkgrey;
+            }
+        }
+    }
+
+    .user_icons{
+        display: inline-block;
+        vertical-align: middle;
+
+        height: $topbarsize;
+        width: $topbarsize * 2;
+
+        .icon_item{
+            display: inline-block;
+            vertical-align: middle;
+
+            a{
+                display: block;
+    
+                height: $topbarsize;
+                width: $topbarsize;
+    
+                font-size: 25px;
+                font-family: $icons;
+                color: $darkgrey;
+                text-align: center;
+                line-height: $topbarsize;
+
+                transition: .3s;
+    
+                &:hover{
+                    color: $cream;
+                }
+            }
+        }
+    }
+}
