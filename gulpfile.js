@@ -55,11 +55,7 @@ function watch() {
     gulp.watch(paths.html.src, html);
 }
 
-function build() {
-    styles();
-    scripts();
-    html();
-}
+var build = gulp.series(gulp.parallel(styles, scripts, html));
 
 exports.styles = styles;
 exports.scripts = scripts;
