@@ -9,6 +9,8 @@ $maincolor: $black;
 *{
     box-sizing: border-box;
     line-height: 100%;
+
+    vertical-align: top;
 }
 *:focus,
 *:active{
@@ -64,6 +66,15 @@ a{
     height: 100px;
 }
 
+.clear_button{
+    border: 0;
+    background: transparent;
+
+    margin: 0;
+    padding: 0;
+
+    cursor: pointer;
+}
 .button{
     height: 40px;
     width: auto;

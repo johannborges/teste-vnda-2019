@@ -11,11 +11,55 @@
     </head>
 
     <body>
-        <div id="floating_menu"></div>
+        <div id="floating_menu">
+            <button class="close_menu clear_button" onclick="toggleMenu();">close</button>
+
+            <div class="container">
+                <div class="menu">
+                    <div class="menu_picture">
+                        <img src="https://via.placeholder.com/200x300.png" alt="Foto de produto da loja">
+                    </div>
+    
+                    <div class="menu_section">
+                        <ul class="menu_list">
+                            <li class="menu_item">
+                                <a href="javascript:;">Item 1</a>
+                            </li>
+    
+                            <li class="menu_item">
+                                <a href="javascript:;">Item 2</a>
+                            </li>
+    
+                            <li class="menu_item">
+                                <a href="javascript:;">Item 3</a>
+    
+                                <ul class="submenu_list">
+                                    <li class="submenu_item">
+                                        <a href="javascript;;">Subitem 1</a>
+                                    </li>
+    
+                                    <li class="submenu_item">
+                                        <a href="javascript;;">Subitem 2</a>
+                                    </li>
+    
+                                    <li class="submenu_item">
+                                        <a href="javascript;;">Subitem 3</a>
+                                    </li>
+                                </ul>
+                            </li>
+    
+                            <li class="menu_item">
+                                <a href="javascript:;">Item 4</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div id="topbar">
             <div class="container">
-                <button class="open_menu">menu</button>
+                <button class="open_menu clear_button" onclick="toggleMenu();">menu</button>
 
                 <div class="logo"><a href="javascript:;">VNDA</a></div>
 
@@ -25,5 +69,7 @@
                 </div>
             </div>
         </div>
+
+        <script src="assets/js/main.min.js"></script>
     </body>
 </html>

@@ -20,20 +20,13 @@ $topbarsize: 60px;
         height: $topbarsize;
         width: $topbarsize;
 
-        padding: 0;
-
-        background: transparent;
-        border: 0;
-
         font-size: 29px;
         font-family: $icons;
         color: $darkgrey;
         text-align: center;
         line-height: $topbarsize;
 
-        cursor: pointer;
-
-        transition: .3s;
+        transition: color .3s, background .3s;
 
         &:hover{
             background: $cream;
@@ -62,7 +55,7 @@ $topbarsize: 60px;
             font-size: 24px;
             letter-spacing: 3px;
 
-            transition: .3s;
+            transition: color .3s;
 
             &:hover{
                 color: $darkgrey;
@@ -93,10 +86,100 @@ $topbarsize: 60px;
                 text-align: center;
                 line-height: $topbarsize;
 
-                transition: .3s;
+                transition: color .3s;
     
                 &:hover{
                     color: $cream;
+                }
+            }
+        }
+    }
+}
+
+#floating_menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    width: 0;
+    height: 100%;
+
+    overflow: hidden;
+
+    background: rgba($white, .9);
+
+    transition: width .3s;
+
+    &.open{
+        width: 100%;
+
+        overflow: auto;
+    }
+
+    .close_menu{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        z-index: 1;
+
+        width: $topbarsize;
+        height: $topbarsize;
+
+        font-size: 29px;
+        font-family: $icons;
+        color: $darkgrey;
+        text-align: center;
+        line-height: $topbarsize;
+
+        transition: color .3s;
+
+        &:hover{
+            color: $cream;
+        }
+    }
+
+    .menu{
+        padding: 100px 0;
+
+        .menu_picture{
+            display: inline-block;
+    
+            width: 200px;
+    
+            img{
+                max-width: 100%;
+            }
+        }
+    
+        .menu_section{
+            display: inline-block;
+    
+            width: calc(100% - 200px);
+            padding-left: 30px;
+    
+            .menu_list{
+                .menu_item{
+                    &:not(:first-of-type){
+                        padding-top: 15px;
+                    }
+
+                    a{
+                        font-size: 20px;
+                        font-family: $playfair;
+                        color: $darkgrey;
+                        line-height: 160%;
+    
+                        transition: color .3s;
+    
+                        &:hover{
+                            color: $cream;
+                        }
+                    }
+    
+                    .submenu_list{
+                        padding-left: 20px;
+                    }
                 }
             }
         }
