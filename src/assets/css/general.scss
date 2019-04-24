@@ -197,3 +197,17 @@ body{
         padding: 0 30px;
     }
 }
+
+@media(min-width: 1400px){
+    .container{
+        width: 1370px;
+        padding: 0 30px;
+    }
+}
+
+@media(min-width: 1600px){
+    .container{
+        width: 1570px;
+        padding: 0 30px;
+    }
+}
